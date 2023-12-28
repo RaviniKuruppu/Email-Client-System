@@ -1,42 +1,32 @@
-# A command-line based email- client system
+# Command-Line Email Client System 📧
 
-This email client system can send emails to clients, either automtically or mannually, and it also keeps a record of the emails that were sent.
+This application is a versatile command-line email client designed to send emails to clients, either automatically or manually. It also keeps a comprehensive record of all sent emails. Embracing **Object-Oriented Programming (OOP) principles**, **Design Patterns**, and **Object Serialization**, this system offers a robust and extensible solution.
 
-The email client has two types of recipients, official and personal. Some official recipients are close friends.
-Details of the recipient list are stored in a text file. 
+## Key Features
 
-An official recipient’s record in the text file has the following format:
+- **Dual Recipient Types:** The email client supports two types of recipients: official and personal. Official recipients include close friends, and details are stored in a text file.
 
-official: name, email, designation. 
+- **Flexible Recipient Records:** Recipient records include information such as name, email, designation, and, for official friends, their birthdays.
 
-A sample record for official recipients in the text file looks as follows:
+- **Dynamic Recipient Management:** Users can update the recipient list through the command line, adding new recipients seamlessly.
 
-Official: nimal,nimal@gmail.com,ceo
+- **Automated Birthday Greetings:** The system automatically sends birthday greetings to recipients on their respective birthdays. The application maintains a list of recipients for whom birthday greetings are sent.
 
- A sample record for official friends in the text file looks as follows (last value is the recipient's birthday):
+- **Recipient Count Tracking:** The system keeps track of recipient objects using static members, providing valuable insights into recipient statistics.
 
-Office_friend: kamal,kamal@gmail.com,clerk,2000/12/12
+- **Email Archiving:** All emails sent by the client are saved in the hard disk using object serialization. Users can retrieve information on emails sent on a particular day through a command-line option.
 
-A sample record for personal recipients in the text file looks as follows (last value is the recipient's birthday):
+## Getting Started
 
-Personal: sunil,nick-name,sunil@gmail.com,2000/10/10
+Before executing the program, make sure to:
 
-The users are given the option to update this text file, i.e., the user can add a new recipient through command-line, and these details are added to the text file. 
+1. Add your email address and password to the `javaMail` class in the `javaMail.java` file.
+2. Maintain the recipient list in the `clientList.txt` file.
 
-When the email client is running, an object for each email recipient are maintained in the application. For each recipient having a birthday, a birthday greeting is sent automatically on the correct day. A list of recipients to whom a birthday greeting is sent is maintained in the application, when it is running. 
-When the email client is running, it should traverse this list, and send a greeting email to anyone having their birthday on that day.
+Note: The application imports the `javax.mail` package, which is included in the `javax.mail.jar`. You can download it [here](https://javaee.github.io/javamail/#Download_JavaMail_Release).
 
-The system is able to keep a count of the recipient objects. Use static members to keep this count.
+Serialized files are named based on the date (e.g., `2022-08-08.ser`).
 
-All the emails sent out by the email client are saved into the hard disk, in the form of objects – object serialization is used for this. The user is able to retrieve information of all the mails sent on a particular day by using a command-line option
 
-In the given code, note that it imports the javax.mail package. This package is included in the javax.mail.jar, which can be downloaded from here
-https://javaee.github.io/javamail/#Download_JavaMail_Release
 
-## 
 
-Before executing the program add your email address and email password to the javaMail class in the javaMail.java file.
-
-List of recipients are maintained in clientList.txt file.
-
-serialized files are named as Year-month-day. EX: 2022-08-08.ser
